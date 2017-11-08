@@ -114,6 +114,7 @@ public class Sorts
         quickSort(a,0,a.length-1);
     }
 
+
     /*----- Main Method for primitive testing -----*/
     public static void main(String args[]) {
         int array[] = { 34, 67, 23, 19, 122, 300, 2, 5, 17, 18, 5, 4,  3,  19, -40, 23  };
@@ -121,39 +122,46 @@ public class Sorts
         int unsortedQuick[] = array.clone();
 
         /* Testing MergeSort */
-        System.out.println("\nIsSort = " + isSorted(unsortedMerge));
+        System.out.println("\nMergeSort Testing");
+        System.out.println("\nOriginal array: ");
         for(int i = 0; i < unsortedMerge.length; i++) {
             System.out.print(unsortedMerge[i] + ",");
         }
+        System.out.println("\nIsSort = " + isSorted(unsortedMerge));
 
-        System.out.println("\n\nStarting mergeSort");
+        System.out.println("\nStarting mergeSort");
         mergeSort(unsortedMerge);
         System.out.println("Ending mergeSort\n");
 
-        System.out.println("IsSort = " + isSorted(unsortedMerge));
+        System.out.println("Sorted array: ");
         for(int i = 0; i < unsortedMerge.length; i++) {
             System.out.print(unsortedMerge[i] + ",");
         }
+        System.out.println("\nIsSort = " + isSorted(unsortedMerge));
 
 
-        System.out.println("\n\n*********************************");
+        System.out.println("\n*********************************");
 
 
         /* Testing QuickSort */
-        System.out.println("\nIsSort = " + isSorted(unsortedQuick));
+        System.out.println("\nQuickSort Testing");
+        System.out.println("\nOriginal array: ");
         for(int i = 0; i < unsortedQuick.length; i++) {
             System.out.print(unsortedQuick[i] + ",");
         }
+        System.out.println("\nIsSort = " + isSorted(unsortedQuick));
 
-        System.out.println("\n\nStarting quickSort");
+        System.out.println("\nStarting quickSort");
         quickSort(unsortedQuick);
         System.out.println("Ending quickSort\n");
 
-        System.out.println("IsSort = " + isSorted(unsortedQuick));
+        System.out.println("Sorted array: ");
         for(int i = 0; i < unsortedQuick.length; i++) {
             System.out.print(unsortedQuick[i] + ",");
         }
-        System.out.println("\n\n*********************************");
+        System.out.println("\nIsSort = " + isSorted(unsortedQuick));
+
+        System.out.println("\n*********************************");
     }
 
 }
